@@ -1,0 +1,96 @@
+/* General Style */
+*{
+    box-sizing: border-box !important;
+}
+
+/* Header section start */
+.header{
+    background-image: url(./../images/events-heavenly-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header .overlay{
+    background-color: rgba(255, 0, 0, 0.356);
+    width: 100%;
+    height: 100%;
+}
+/* Header section end */
+
+/* sidemenu section start */
+aside{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: black;
+}
+aside .menuOpen{
+    left: 100%
+}
+/* sidemenu section end */
+/* Singers section start */
+.singers .container{
+    padding: 100px 0;
+}
+.singers .container .singersContainer{
+    max-width: 480px;
+    min-width: 480px;
+}
+.singers .container .singersContainer .singerTitle{
+    padding: 10px;
+    margin: 0 !important;
+    text-align: center;
+    background-color: #E68285;
+    cursor: pointer;
+}
+.singers .container .singersContainer .singerInfo{
+    padding: 10px;
+    margin: 0 !important;
+    text-align: center;
+    background-color: #CCCCCC;
+    display: none;
+}
+.singers .container .singersContainer .singerInfo.first{
+    display: block;
+}
+/* Singers section end */
+
+/* Counter section start */
+.countDown{
+    background-image: url(./../images/invitation-2508607__340.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 340px;
+    margin-bottom: 100px;
+    
+}
+.countDown .overlay{
+    background-color: rgba(255, 0, 0, 0.356);
+    width: 100%;
+    height: 100%;
+}
+.days,.hours, .minuets, .seconds{
+    min-height: 150px;
+}
+/* Counter section end */
+
+/* contact section start */
+.contact .social li{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.contact .social li:hover{
+    background-color: #D62E33;
+    color: white !important;
+}
+#remainingChars{
+    color: #D62E33;
+}
+.contact button{
+    background-color: #D62E33;
+}
+/* contact section end */
