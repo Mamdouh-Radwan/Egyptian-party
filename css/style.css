@@ -16,7 +16,7 @@
     height: 100%;
 }
 .header .menuOpen{
-    left: 0;
+    left: 10px;
     cursor: pointer;
 }
 /* Header section end */
@@ -32,6 +32,15 @@ aside{
 }
 aside .closeBtn{
     cursor: pointer;
+}
+aside .navLink{
+    transition: all 0.5s;
+}
+aside .navLink:hover{
+    color: #511411 !important;
+}
+.active{
+    color: #511411 !important;
 }
 /* sidemenu section end */
 /* Singers section start */

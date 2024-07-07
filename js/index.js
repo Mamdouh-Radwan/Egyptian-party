@@ -7,10 +7,40 @@ $('.header .menuOpen').on('click', () =>{
 
 $('aside .closeBtn').on('click', () =>{
   $('aside').animate({left: -($('aside').innerWidth())},1000);
-  $('.header .menuOpen').animate({left: 0},1000);
+  $('.header .menuOpen').animate({left: 10},1000);
   $('.header .menuOpen').fadeIn()
 })
 
+// Scroll behavior
+$('.navLink').on('click', (e) =>{
+  let targetSec = $(e.target).attr('href');
+  let targetSecOffset = $(targetSec).offset().top;
+  $('html, body').animate({scrollTop: targetSecOffset}, 1500);
+  $('.navLink').removeClass('active')
+  $(e.target).addClass('active')
+})
+
+$(window).on('scroll', () =>{
+  let windowOffset = $(window).scrollTop();
+  if(windowOffset < $('#details').offset().top){
+    $('.navLink').removeClass('active');
+    $(".navLink[href|='#home']").addClass('active');
+  }
+  else if(windowOffset >= $('#details').offset().top && windowOffset < $('#duration').offset().top){
+    $('.navLink').removeClass('active');
+    $(".navLink[href|='#details']").addClass('active');
+  }
+  else if(windowOffset >= $('#duration').offset().top && windowOffset < (($('#contact').offset().top)-30)){
+    $('.navLink').removeClass('active');
+    $(".navLink[href|='#duration']").addClass('active');
+  }
+  else if(windowOffset >= (($('#contact').offset().top)-30)){
+    $('.navLink').removeClass('active');
+    $(".navLink[href|='#contact']").addClass('active');
+  }
+})
+
+console.log($(".navLink[href|='#home']").html());
 // singer section
 $(".singerTitle").on("click", (e) => {
   $(".singerInfo").not($(e.target).next()).slideUp(500);
