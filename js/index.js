@@ -1,3 +1,16 @@
+// side menu
+$('.header .menuOpen').on('click', () =>{
+  $('.header .menuOpen').animate({left: $('aside').innerWidth()},1000);
+  $('aside').animate({left: 0},1000)
+  $('.header .menuOpen').fadeOut()
+})
+
+$('aside .closeBtn').on('click', () =>{
+  $('aside').animate({left: -($('aside').innerWidth())},1000);
+  $('.header .menuOpen').animate({left: 0},1000);
+  $('.header .menuOpen').fadeIn()
+})
+
 // singer section
 $(".singerTitle").on("click", (e) => {
   $(".singerInfo").not($(e.target).next()).slideUp(500);

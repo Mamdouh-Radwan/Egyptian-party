@@ -9,33 +9,33 @@
     <title>Egyptian party</title>
   </head>
   <body>
-    <section class="header vh-100">
-      <div class="overlay d-flex align-items-center justify-content-center">
+    <section class="header vh-100" id="home">
+      <div class="overlay position-relative d-flex align-items-center justify-content-center">
         <div class="container">
           <h1 class="text-white text-center display-3 fw-semibold">
             Egyptian Party
           </h1>
           <p class="text-center text-white fs-5">Let's have Fun</p>
         </div>
+        <div class="menuOpen position-absolute">
+          <span class="text-white fs-4"><i class="fa-solid fa-bars"></i> Open</span>
+        </div>
       </div>
     </section>
-    <!-- <aside class="position-fixed">
+    <aside class="position-fixed">
       <div class="closeBtn text-end me-4 mt-4">
         <i class="fa-solid fa-close text-white fs-4"></i>
       </div>
       <div class="tabs">
         <ul class="list-unstyled mt-5 ms-5">
-          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#">Home</a></li>
-          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#">Home</a></li>
-          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#">Home</a></li>
-          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#">Home</a></li>
+          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#home">Home</a></li>
+          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#details">Details</a></li>
+          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#duration">Duration</a></li>
+          <li class="mb-4"><a class="text-decoration-none text-white fw-semibold fs-3" href="#contact">Contact</a></li>
         </ul>
       </div>
-      <div class="menuOpen position-absolute">
-        <span class="text-white fs-4"><i class="fa-solid fa-bars"></i> Open</span>
-      </div>
-    </aside> -->
-    <section class="singers">
+    </aside>
+    <section class="singers" id="details">
       <div class="container d-flex justify-content-center align-items-center">
         <div class="singersContainer">
           <p class="singerTitle text-white fw-semibold fs-3">singer one</p>
@@ -102,7 +102,7 @@
         </div>
       </div>
     </section>
-    <section class="countDown">
+    <section class="countDown" id="duration">
       <div class="overlay d-flex align-items-center">
         <div class="container text-center" id='countDownDisplay'>
           <div class="row">
@@ -134,7 +134,7 @@
         </div>
       </div>
     </section>
-    <section class="contact mb-5">
+    <section class="contact mb-5" id="contact">
       <div class="container">
         <h2>JOIN US</h2>
         <p class="text-muted text-center mb-5">

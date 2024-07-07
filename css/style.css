@@ -15,18 +15,23 @@
     width: 100%;
     height: 100%;
 }
+.header .menuOpen{
+    left: 0;
+    cursor: pointer;
+}
 /* Header section end */
 
 /* sidemenu section start */
 aside{
     top: 0;
-    left: 0;
+    /* left: 0; */
+    right: 100%;
     bottom: 0;
     width: 250px;
     background-color: black;
 }
-aside .menuOpen{
-    left: 100%
+aside .closeBtn{
+    cursor: pointer;
 }
 /* sidemenu section end */
 /* Singers section start */
