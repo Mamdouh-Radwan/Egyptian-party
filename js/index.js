@@ -5,6 +5,17 @@ $('.header .menuOpen').on('click', () =>{
   $('.header .menuOpen').fadeOut()
 })
 
+// loader
+$(document).ready(() =>{
+  $('.loader').fadeOut(1500, () =>{
+    $('.loaderPage').fadeOut(1500, () =>{
+      $('body').css({overflow: "auto"});
+      $('.loaderPage').remove();
+    });
+
+  })
+})
+
 $('aside .closeBtn').on('click', () =>{
   $('aside').animate({left: -($('aside').innerWidth())},1000);
   $('.header .menuOpen').animate({left: 10},1000);
@@ -26,11 +37,11 @@ $(window).on('scroll', () =>{
     $('.navLink').removeClass('active');
     $(".navLink[href|='#home']").addClass('active');
   }
-  else if(windowOffset >= $('#details').offset().top && windowOffset < $('#duration').offset().top){
+  else if(windowOffset >= $('#details').offset().top && windowOffset < (($('#duration').offset().top)-20)){
     $('.navLink').removeClass('active');
     $(".navLink[href|='#details']").addClass('active');
   }
-  else if(windowOffset >= $('#duration').offset().top && windowOffset < (($('#contact').offset().top)-30)){
+  else if(windowOffset >= (($('#duration').offset().top)-20) && windowOffset < (($('#contact').offset().top)-30)){
     $('.navLink').removeClass('active');
     $(".navLink[href|='#duration']").addClass('active');
   }
